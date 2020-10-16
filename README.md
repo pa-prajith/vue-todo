@@ -1,5 +1,5 @@
 # todo-app
-
+To do App in Vue ...!
 ## Project setup
 ```
 npm install
