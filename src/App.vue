@@ -1,27 +1,19 @@
 <template>
-<div id="container">
+<div id="todo-container">
   <header>
     <h1>Todo Application</h1>
   </header>
-  <section class="form-container">
+  <section class="todo-form">
     <form action="">
       <input type="text" placeholder="Enter Todo item">
       <button>Add Todo</button>
     </form>
   </section>
-  <section class="todoList">
+  <section class="todo-list">
     <ul>
       <li>
         <div class="todo-item">Todo Item List goes here</div>
-        <div class="icons">
-          <i class="far fa-check-circle"></i>
-          <i class="far fa-edit"></i>
-          <i class="fas fa-trash"></i>
-        </div>
-      </li>
-      <li>
-        <div class="todo-item done">Todo Item List goes here. Content goes here. This is a long text!!!. Now what , lets see how it looks on page </div>
-        <div class="icons">
+        <div class="todo-icons">
           <i class="far fa-check-circle"></i>
           <i class="far fa-edit"></i>
           <i class="fas fa-trash"></i>
@@ -29,7 +21,15 @@
       </li>
       <li>
         <div class="todo-item">Todo Item List goes here</div>
-        <div class="icons">
+        <div class="todo-icons">
+          <i class="far fa-check-circle"></i>
+          <i class="far fa-edit"></i>
+          <i class="fas fa-trash"></i>
+        </div>
+      </li>
+      <li>
+        <div class="todo-item">Todo Item List goes here</div>
+        <div class="todo-icons">
           <i class="far fa-check-circle"></i>
           <i class="far fa-edit"></i>
           <i class="fas fa-trash"></i>
@@ -61,7 +61,7 @@ export default {
 </script>
 
 <style>
-#container {
+#todo-container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -74,15 +74,15 @@ header {
   text-align: center;
 }
 
-/* form-container */
-.form-container {
+/* Form */
+.todo-form {
   width: 75%;
   padding: 50px;
   margin: 0 auto;
   text-align: center;
 }
 
-.form-container input {
+.todo-form input {
   width: 50%;
   margin-right: 30px;
   height: 30px;
@@ -95,23 +95,25 @@ header {
   
 }
 
-.form-container button {
-  padding: 13px 17px;
+.todo-form button {
+  padding: 16px 21px;
   background-color: #2c3e50;
   color: #ffffff;
   border-radius: 15px;
-  font-weight: bold;
+  font-weight: bolder;
+  position: relative;
+  bottom: 3px;
 }
 
-/* Todolist Container */
-.todoList {
+/* Todolist  */
+.todo-list {
   width: 55%;
   padding: 50px;
   margin: 0 auto; 
   font-size: 25px;
 }
 
-.todoList ul li {
+.todo-list ul li {
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -119,7 +121,7 @@ header {
   border-bottom: 1px solid #cccccc;
 }
 
-.done {
+.todo-done {
   text-decoration: line-through;
 }
 
@@ -127,11 +129,11 @@ header {
   font-weight: 500;
 }
 
-.icons {
-  white-space: nowrap;;
+.todo-icons {
+  white-space: nowrap;
 }
 
-.icons i{
+.todo-icons i{
   margin-left: 15px;
   cursor: pointer;
 }
