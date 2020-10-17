@@ -115,7 +115,6 @@ header {
 
 .todo-form input {
   width: 50%;
-  /* margin-right: 30px; */
   height: 30px;
   padding: 10px;
   border: 1px solid #2c3e50;
